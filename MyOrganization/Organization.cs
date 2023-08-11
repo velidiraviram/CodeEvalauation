@@ -27,20 +27,16 @@ namespace MyOrganization
         public Position? Hire(Name person, string title)
         {
             var count = 1;
-            if (count == 1) { 
-                if (person != null && title != null)
+                if(count==1)
                 {
+                Employee emp = new Employee(1, person);
+                Position p = new Position(title);
+                p.SetEmployee(emp);
+                PrintOrganization(p, title);
+                return p;
 
-                }
-                count++;
-                return null;
             }
-            
-            else {
-                
-                return null;
-            }
-
+            else { return null; }
         }
 
         override public string ToString()
